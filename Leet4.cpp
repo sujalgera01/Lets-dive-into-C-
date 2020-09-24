@@ -1,19 +1,18 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int print_max(int arr[],int n){
+int counter(int arr[], int n){
+	sort(arr,arr+n);
 	int count = 0;
-	int t = n/3;
 	for(int i=0;i<n;i++){
-		for(int j=i+1;j<n;j++){
-			if(arr[i]==arr[j]){
-				count++;
-			}
+		if(arr[i] == arr[i+1]){
+			count++;
 		}
-		if(count >= t){
+		if(count > n/3){
 			cout<<arr[i]<<" ";
+			count = 0;
 		}
-		count = 0;
 	}
 }
 
@@ -25,5 +24,5 @@ int main(){
 		cin>>arr[i];
 	}
 
-	print_max(arr,n);
+	counter(arr,n);
 }
