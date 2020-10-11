@@ -5,7 +5,7 @@ using namespace std;
 
 int lexorder(string s){
 	int pos = 0;
-	string k;
+	string k = "";
 	int l = s.length();
 	int count = 0;
 	int i,j;
@@ -13,24 +13,13 @@ int lexorder(string s){
 		for(j=0;j<l;j++){
 			if(s.at(i) == s.at(j)){
 				break;
+			}
 		}
+		if(i == j){
+			k.at(pos++) = k.at(i);
 		}
-
-	if(i == j){
-		s.at(pos++) = s.at(i);
 	}
-	cout<<s;
-	}
-
-
-	// for(int i=0;i<l;i++){
-	// 	if(s.at(i) != '*'){
-	// 		cout<<s.at(i);
-	// 	}
-	// }
-	// k = s;
-	// sort(k,k+l1);
-	// cout<<k;
+	cout<<k;
 }
 
 int main(){
