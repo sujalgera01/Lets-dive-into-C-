@@ -5,21 +5,20 @@ using namespace std;
 
 int lexorder(string s){
 	int pos = 0;
-	string k = "";
 	int l = s.length();
 	int count = 0;
 	int i,j;
 	for(i=0;i<l;i++){
-		for(j=0;j<l;j++){
+		for(j=0;j<i;j++){
 			if(s.at(i) == s.at(j)){
 				break;
 			}
 		}
-		if(i == j){
-			k.at(pos++) = k.at(i);
+		if(j == i){
+			s.at(pos++) = s.at(i);
 		}
 	}
-	cout<<k;
+	cout<<s;
 }
 
 int main(){
