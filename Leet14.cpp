@@ -5,10 +5,22 @@ using namespace std;
 
 int buddystrings(string s1,string s2){
 	if(s1 == ""){
-		return false;
+		cout<<"false";
 	}
 	if(s1 == s2){
-		return false;
+		int count = 0;
+		for(int i=0;i<s1.size()-1;i++){
+			if(s1[i] == s1[i+1]){
+				count++;
+			}
+			else{
+				count = 0;
+			}
+		}
+		if(count == 0)
+			cout<<"false";
+		else
+			cout<<"true";
 	}
 	else{
 		for(int i=0;i<s1.size();i++){
@@ -17,7 +29,10 @@ int buddystrings(string s1,string s2){
 			}
 		}
 		if(s1==s2){
-			return true;
+			cout<<"true";
+		}
+		else{
+			cout<<"false";
 		}
 	}
 }
