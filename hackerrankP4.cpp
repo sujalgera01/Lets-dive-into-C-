@@ -27,5 +27,6 @@ int main(){
 		cin>>w;
 		cout<<"which position: ";
 		cin>>pos;
+		cout<<vec[w][pos]<<endl;
 	}
 }
